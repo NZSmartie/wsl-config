@@ -6,3 +6,4 @@ set expandtab
 set nocompatible
 filetype off
 
+syntax on

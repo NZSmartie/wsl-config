@@ -1,0 +1,18 @@
+# Turn off that annoying start up message
+startup_message off
+
+term screen-256color
+ 
+# Turn the even more annoying whole-screen-flash-on-tab-complete "feature"
+vbell off
+  
+# Window list at the bottom. hostname, centered tabs and redmarked active windows:
+#shelltitle '$ |'
+hardstatus alwayslastline
+hardstatus string '%{= kr}[ %{R}%H %{r}]%{R}[%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%? %= %{r}][%{B} %m/%d %{W}%c %{r}]'
+
+defscrollback 50000
+
+# Keyboard Bindings
+bindkey -k F1 resize -5
+bindkey -k F2 resize +5

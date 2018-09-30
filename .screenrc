@@ -1,6 +1,9 @@
 # Turn off that annoying start up message
 startup_message off
 
+#Disable deflogin error messages as WSL isn't designed for that
+deflogin off
+
 # Turn the even more annoying whole-screen-flash-on-tab-complete "feature"
 vbell off
   

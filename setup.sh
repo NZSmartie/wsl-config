@@ -20,6 +20,7 @@ declare -a RCFILES=(
     .screenrc
     .vimrc
     .bash_profile
+    .npmrc
 )
 
 for rcfile in "${RCFILES[@]}"

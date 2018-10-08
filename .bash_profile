@@ -1,7 +1,8 @@
 SSH_ENV="$HOME/.ssh/environment"
 
+export NPM_PACKAGES=$HOME/.npm-packages
 export PYTHONSTARTUP=$HOME/.pythonrc
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$NPM_PACKAGES/bin
 
 USER_RUN=/run/user/$UID
 
@@ -11,6 +12,10 @@ umask 022
 if [ ! -d "$USER_RUN" ]; then
     $HOME/.startup.sh
 fi
+
+# Setup NPM
+mkdir -p $NPM_PACKAGES
+export MANPATH=$(manpath):$NPM_PACKAGES/share/man
 
 function start_agent {
     echo "starting ssh-agent..."

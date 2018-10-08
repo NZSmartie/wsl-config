@@ -5,6 +5,9 @@ export PATH=$PATH:$HOME/.local/bin
 
 USER_RUN=/run/user/$UID
 
+# Mask out group,other write permissions from newly created directories
+umask 022
+
 if [ ! -d "$USER_RUN" ]; then
     $HOME/.startup.sh
 fi
